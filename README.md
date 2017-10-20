@@ -1,375 +1,224 @@
-# Participating in Open Source
+# Участие в open source проектах
 
-I wrote this guide to help anyone start contributing to open source projects on GitHub.
-First, thanks for your initiative to help out!
-One of the reasons that open source is so great is because of the eagerness of others to help.
+Я написал это руководство, чтобы помочь любому присоединяться или выкладывать свои (contributing) open source проекты на GitHub. Одна из причин крутости open source — в желании людей помогать друг другу.
 
-Whether you've been programming for many years or are brand new, there are a few things you need to know to effectively use GitHub.
-There are many guides on "how" to use GitHub from a technical perspective: which buttons to press, what commands to run, etc.
-Below I've included some of my favorites.
+Не важно — программируете ли вы много лет или только начали, есть несколько моментов, которые вам нужно знать, чтобы продуктивно использовать GitHub. Гайдов "как" сделать с технической точки зрения на GitHub множество: на какую кнопку нажать, какие команды запустить и подобное.
 
-<aside>
-Please [tweet](https://twitter.com/briantford) me or file an [issue](https://github.com/btford/participating-in-open-source/issues) if you know of a good addition to this list!
-</aside>
+- https://help.github.com/
+- https://habrahabr.ru/post/275219/
 
-* [git-it](https://github.com/jlord/git-it) – an interactive tutorial for learning how to use `git` and GitHub
-* [GitHub's help page](https://help.github.com/) – find advice on specific topics
+В начале публикация своей работы на GitHub пугает. Существует мало руководств, посвященных этикету, практическим приёмам и ожиданиям. Этот гайд направлен заполнить пробелы.
 
-At first, it's intimidating to publicize your work on GitHub.
-Few guides address "how" you should use it in terms of etiquette, best practices, and expectations.
-This guide aims to fill in those gaps.
+Читая этот гайд, помните, что нормально (и даже ожидаемо!) делать ошибки. Не нужно запоминать каждую мелочь. Делайте всё возможное и учитесь в процессе.
 
-As you read this guide, please keep in mind that it's okay (and even expected!) to make mistakes.
-You don't have to memorize every minute detail.
-Do the best you can and learn as you go.
+Гайд предполагает, что вы работаете с JavaScript-модулем, установленным через `npm` или `bower`, который размещён на GitHub. Кроме команд, предназначенных для `npm` или `bower`, большая часть этого гайда применима к другим платформам и языкам.
 
-This guide assumes you are dealing with a JavaScript module installed via `npm` or `bower` that is hosted on GitHub.
-Aside from commands dealing with `npm` or `bower`, most of this advice applies to other platforms and languages.
+### Как задавать вопрос
 
+Перед тем, как спрашивать, поищите и почитайте существующие записи. Загляните в документы, Google, GitHub, и StackOverflow. Если на ваш вопрос уже отвечали раньше много раз, то разработчики, ответственные за проект, возможно, устали повторять ответ.
 
+Если проект маленький, обычно принято задавать вопросы через отправку issue (см. ниже). Если большой — у них скорее всего есть рассылка или IRC-канал, через которые лучше всего обращаться с вопросами. StackOverflow — также очень хороший ресурс. Когда есть возможность, задавайте вопросы на публичном форуме. Таким образом ответить на вопрос сможет кто угодно, а ответ будет доступен любому человеку с таким же вопросом. Если ничего не работает, можно написать в твиттер или на почту поддержки проекта.
 
-## Asking a Question
+### Отправка уведомления о баге (issue)
 
-Before you ask, do some searching and reading.
-Check the docs, Google, GitHub, and StackOverflow.
-If your question is something that has been answered many times before, the project maintainers might be tired of repeating themselves.
+На GitHub уведомления о багах или улучшениях называются "issues".
 
-If the project is small, it's usually fine to ask questions on GitHub by filing an issue.
-If the project is large, they might have a mailing list or IRC channel that would be a better place to ask.
-StackOverflow is also a great resource.
-Whenever possible, ask your question on a public forum.
-This allows anyone to answer and makes the answer available for the next person with the same question.
-If all else fails, you might tweet at or email the maintainer(s).
+#### Об этом спрашивали раньше?
 
+Перед тем как отправить уведомление, нужно поискать существующие issues. Не забывайте проверять и открытые issues и закрытые. Если вы найдёте issue, который подобен вашему, прочтите всё о нём.
 
+Если issue такой же как у вас, вы можете прокомментировать с дополнениями, чтобы помочь ответственным за проект разработчикам (maintainers) сделать отладку. Добавление комментария автоматически подпишет вас на уведомления по почте, что может быть полезным, когда будут появляться обновления, касающиеся этого issue. Если вам нечего добавить, но вы хотите получать уведомления об обновлениях на почту, вы можете нажать кнопку "watch", которая находится под комментариями.
 
-## Submitting a Bug Report (or "Issue")
+#### Нет, никто не спрашивал
 
-In GitHub, "Bug Reports" are called "Issues."
+Если вы не можете ничего найти в существующих issues, не стесняйтесь отправить свой.
 
-### Has This Been Asked Before?
+Нужно проверить, что указана версия проекта, так же как и версии связанных с ним приложений. Например, удостоверьтесь, что включили номера версий, выводимые командами `node --version` и `npm list`. Если вы заметите, что у вас установлена не последняя версия, используйте `npm update` и подтвердите, что issue всё ещё присутствует.
 
-Before you submit a bug report, you should search existing issues.
-Be sure to check both currently open issues, as well as issues that are already closed.
-If you find an issue that seems to be similar to yours, read through it.
+Разработчики проекта очень приветствуют тщательные разъяснения. Обычно это помогает им быстрее справиться с проблемой и всем это на руку.
 
-If this issue is the same as yours, you can comment with additional information to help the maintainer debug it.
-Adding a comment will subscribe you to email notifications, which can be helpful in getting important updates regarding the issue.
-If you don't have anything to add but still want to receive email updates, you can click the "watch" button at the bottom of the comments.
+### Улучшаем код
 
-### Nope, Hasn't Been Asked Before
+Лучший способ — сделать "Fork" (копию) репозитория на GitHub. Это создаст экземпляр-клон репозитория в вашем GitHub аккаунте.
 
-If you can't find anything in the existing issues, don't be shy about filing a new one.
+Перед тем как улучшать код, стоит сфокусироваться на том, что вы хотите конкретно сделать.
 
-You should be sure to include the version the project, as well as versions of related software.
-For example, be sure to include the version numbers output by the commands `node --version` and `npm list`.
-If you notice that your installed version is not the latest, use `npm update` and confirm that the issue is still there.
+Каждый коммит должен выполнять что-то одно, а на каждый PR (см. ниже) должно быть одно специфическое улучшение.
 
-Project maintainers really appreciate thorough explanations.
-It usually helps them address the problem more quickly, so everyone wins!
+#### Forking
 
+1. Нажмите на Fork в репозитории
+2. Перейдите в ваш форк внутри вашего аккаунта
+3. Сделайте `git clone`
 
+#### Исправление и тестирование
 
-## Improving the Code
+Ок, теперь вы готовы к исправлению кода? Не совсем! Перед тем, как начать редактировать, вам нужно создать ветку (branch). Branch — как альтернативная временная линия. Можете почитать о `git` ветках [тут](https://goo.gl/KaaEcR).
 
-The best way is to "Fork" the repo on GitHub.
-This will create a copy of the repo on your GitHub account.
+Делаем ветку: `git checkout -b something`
 
-Before you set out to improve the code, you should have a focused idea in mind of what you want to do.
+Если вы пытаетесь починить баг, возможно вам стоит назвать ветку "fix-short-description". Если вы добавляете функциональность, "feat-short-description" — хорошее название. Когда вы меняете что-то в коде, возможно, вам захочется испытать его внутри какого-нибудь приложения или более крупного проекта.
 
-Each commit should do one thing, and each PR should be one specific improvement.
+В отношении стиля кода — просто пытайтесь имитировать стиль существующего. Не пыхтите над ним слишком сильно. Если владельцам не понравится внешний вид вашего кода, они предложат изменения.
 
-### Forking
+Большая часть проектов пользуется наборами тестов, для уверенности в том, что имеющаяся функциональность кода не меняется из-за вносимых изменений. Это помогает поддерживать софт в стабильном состоянии.
 
-TODO: this
+#### Коммиты и пуш
 
-`git clone`
+```
+git commit -m "your commit message"
+```
 
+#### Использование собственных изменений
 
+Хоть это и не очевидно, вы можете начать использовать код в своих проектах сразу же.
 
-### Editing and Testing
+#### Отправка ваших изменений обратно в проект
 
+Вы сделали изменения, протестировали их с `git commit` и хотите отправить обратно в проект, чтобы они были включены в следующие версии.
 
-Ok, you're ready to start editing the code, right?
-Not quite!
-Before you start editing, you should create a [branch].
-A branch is like an alternate timeline.
-You can read more about `git` branches [here].
+На GitHub это делается с помощью отправки "pull request" (PR).
 
-If you're trying to fix a bug, you might want to name the branch `fix-short-description`.
-If you're adding a feature, `feat-short-description` is a good name.
+##### Отправка pull request
 
-`git checkout -b something`
+Золотое правило отправки pull request — всё выполнять так, как задумали владельцы проекта. Вы не можете читать мысли ответственных за проект, но можете посмотреть, что они делали в прошлом. Оценка этих действий заранее может повысить вероятность принятия ваших изменений. 
 
-As you're changing the code, you might want to try it within some app or larger project.
+Проще выражаясь: попытайтесь сымитировать стиль существующего кода. Обращайте внимание на отступы и стиль фигурных скобок в коде. Содержит стиль ранние инструкции `return` или там их избегают?
 
-`npm link`,
-`bower link`,
-or symlinks
+Код — не единственное, на что стоит обращать внимание. Заметьте какое время и формат имеют коммиты сообщений. Некоторые проекты используют настоящее время: "fixes the bug". А некоторые прошедшее: "fixed the bug".
 
+Хороший способ проверить это — использовать `git log` и прочитать последние коммиты.
 
-As far as code style, just try to imitate the style of existing code.
-Don't sweat over this too much.
-If the maintainer doesn't like how your code looks, they'll suggest changes.
+Что ещё стоит помнить:
 
-Most projects have a set of tests to make sure that the existing functionality of the code stays the same as you make changes.
-This helps keep the software stable.
+**Не** меняйте номер версии софта (в `package.json` или `bower.json`). Владельцы проекта сами позаботятся об этом, когда будут выпускать новую версию.
 
-For example, in `npm`.
+Если проект поддерживается корпорацией, возможно у них есть [Contributor License Agreement (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) для избежания проблем с законом.
 
-### Committing and Pushing
+Владельцы проекта могут быть заняты, так что дайте им немного времени. Разработчики, вовлечённые в open source, часто участвуют во множестве проектов. Нередко разработчик получает десятки нотификаций о неисправностях в день, так что будьте терпеливым.
 
-`git commit -m "your commit message"`
+Если они не отвечают в течение 2 недель, вы можете прокомментировать это, чтобы вынести тему наверх. Чего-нибудь, вроде, "ping @ProjectMaintainer" обычно достаточно. Если даже после этого от них ничего не слышно, электронная почта — хороший способ выйти на контакт.
 
-### Using Your Change
+Команда может ответить тремя возможными способами:
 
-Though it may not be obvious, you can begin using your code in your own projects immediately.
+1. Всё сливается (merge). Ура!
+2. Ответственный за проект просит вас исправить что-то в PR перед тем, как принять вас. Мы обсудим это ниже.
+3. PR закрывается, а ваши изменения не добавлены. Обычно ответственные за проект дают небольшое разъяснение. Если от вас была новая фича, возможно, уже существует способ заставить код делать то, что вы хотите, вы просто этого не заметили. Если исправление бага, возможно, они хотят решить проблему иначе. Не позволяйте трудностям отбить у вас желание продолжать.
 
+##### Исправление issues в pull request
 
+Когда команда просит внести изменения в PR, новички ошибочно закрывают существующий и создают новый. Не стоит так делать! Существующий PR легко обновляется.
 
-### Getting your Change into the Project
-
-You made your change, tested it, committed it with `git commit`, and want to send it back to the project and have it included in a future version.
-
-To do this on GitHub, you need to submit a "pull request" (PR).
-
-#### Submitting a Pull Request
-
-The golden rule of submitting PRs is to do things the way the project maintainers would want it done.
-You can't read the minds of the project maintainers, but you can look what they did in the past.
-Considering these things upfront can really help streamlining the process of getting your change accepted.
-
-Simply put: try to imitate the style of the existing code.
-Pay attention to the indentation and brace style in the code.
-Does the style use or avoid early `return`s?
-
-Code isn't the only thing to take note of.
-You should also pay attention to the tense and format of the commit messages.
-Some projects prefer commits to be in present tense:
-
-`fixes the bug`
-
-And others prefer past tense:
-
-`fixed the bug`
-
-A good way to check is to use `git log` and read through past commits.
-
-A couple things to keep in mind:
-
-* Don't change the version number of the software (in `package.json` or `bower.json`).
-  The project maintainer(s) will take care of this when they decide to release a new version.
-
-
-If the project is maintained by a corporation, they might have a [Contributor License Agreement (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) in place to avoid legal issues.
-
-
-Project maintainers may be busy, so give them some time.
-Developers involved in open source often contribute to many projects.
-It's not uncommon for a developer to receive dozens of issues notifications a day, so be patient.
-
-If they don't reply in a couple weeks, you might add a comment to "bump" the issue.
-Something like "ping @ProjectMaintainer" is usually sufficient.
-If you still don't hear from them, an email might be a good way to get in contact.
-
-
-Assuming the maintainer responds, there are three possible outcomes for your PR:
-
-1. It gets merged. Yay!
-2. The maintainer asks you to fix something in the PR before they accept it.
-  We'll discuss this below.
-3. The PR gets closed, and your change is not added.
-  Typically the maintainer will give some justification why.
-  If you're adding a feature, maybe there's already some way to get the code to do what you want that you didn't notice.
-  If it's a bug, perhaps they want to solve the problem differently.
-  Regardless, don't let this discourage you.
-
-
-#### Fixing Issues in the PR
-
-When asked to make a change to a PR, newcomers oft mistakenly close the existing PR and create a new one.
-There's no need to do this!
-It's easy to update the existing one.
-
-First, make your changes to the relevant file(s).
-As you've done before, stage the file with `git add`:
+Во-первых, внесите изменения в соответствующие файлы. Добавьте файл с помощью `git add`, как вы уже делали:
 
 `git add some-file`
 
-Then you can amend your previous commit like this:
+Затем можете изменить свой предыдущий коммит вот так:
 
 `git commit --amend`
 
-This command takes your staged changes and puts it into your previous commit.
+Эта команда помещает ваши поэтапные изменения в предыдущий коммит.
 
-To update the commit in your PR, you'll need to force push:
+Чтобы обновить коммит в вашем PR, вам нужно выполнить force push:
 
 `git push --force`
 
-The `--force` tells `git` that you want to overwrite the previous commit in your GitHub-hosted repository.
+Команда `--force` сообщает `git` , что вы хотите перезаписать предыдущий коммит.
 
-Another common mistake is to create multiple commits instead of amending the changes into one commit.
+Другая распространенная ошибка — создание нескольких коммитов, вместо внесения изменений в один.
 
-So you create another commit...
+Почитайте о [перезаписи истории](https://goo.gl/zDv8qc).
 
-http://git-scm.com/book/en/Git-Tools-Rewriting-History
+##### Мой PR был закрыт, но я хочу использовать свои изменения!
 
+**Хорошие новости**: даже если ваше изменение не будет принято в репозиторий контрибьютора, вы в любом случае сможете его использовать. npm позволяет установить из репозитория GitHub
 
-#### My PR was Closed but I Still Want to use my Changes!
-
-**Good news:** even if your change isn't accepted into the contributor's repository, you can still use it.
-
-npm allows you to install from a GitHub repo
-
-```shell
+```
 $ npm install user/repo
 ```
 
-Better yet, you can use your changes while staying up-to-date on the original repo's code.
-This is often referred to as "maintaining a fork" of a project.
+А ещё вы можете использовать свои изменения и одновременно видеть изменения исходного кода репозитория. Обычно это называется "maintaining a fork" (поддержка копии) проекта. Для этого потребуется добавить ещё один [remote](https://goo.gl/vcVNWN).
 
-How does this work?
-First, we'll want to add another remote.
-Our fork on GitHub has the remote name `origin`.
+### Создание своего проекта
 
-TODO: note about git remotes
-TODO: maintaining a fork (merging "upstream" changes)
-TODO: typically there's no reason to publish your fork, you can reference the SHA on github and DL a zip.
+Перед тем как начинать свой проект, пожалуйста хорошо изучите существующие — нет ли сильно похожего на ваш.
 
+#### Поиск по существующим проектам
 
-
-## Starting a Project
-
-Before you start a project, please do thorough research that something like what you want to make
-doesn't already exist.
-
-
-### Searching for Existing Projects
-
-```shell
+```
 $ npm search
 ```
 
-Sometimes you find a project that's old and no longer maintained, but otherwise solves your problems.
-See the [using a fork](TODO) section above for more info.
+Иногда вы находите старый проект, который больше не поддерживается, но он решает ваши проблемы. Как делать форк смотрите выше.
 
-<aside>
-**Bonus:** Make a list as you go with notes.
-If you find a module you like, you can use your notes to improve the "See Also" section of the
-modules you found in your research by sending them PRs.
-If you don't find a module you like and end up creating your own, you can turn these notes into a
-"See Also" section for your module!
-</aside>
+**Бонус**: Составляйте список заметок по ходу работы. Если найдете понравившийся модуль, можете использовать заметки, чтобы улучшить секцию «See Also» в тех модулях, которые вам встретились, пока вы вели поиск, отправив им PR. Если не найдёте нужный модуль и не создадите свой собственный, можете превратить эти заметки в секцию «See Also» для своего модуля!
 
+#### Начало проекта
 
-### Starting a Project
+Начало нового open source проекта должно быть крайней мерой. Почему?
 
-Starting a new open source project should be your last resort.
-Why?
+**Практический опыт:** Не публикуйте ничего в `npm` пока у проекта не будет обоснованной минимальной функциональности.
 
-**Best Practice:** Don't publish something to `npm` until it has some reasonable minimal functionality.
+Помните: вы всегда можете использовать `npm link` или `npm install user/repo`
 
-Remember: you can always use `npm link` or `npm install user/repo`
+#### Название проекта
 
-### Naming the project
+Если ваш модуль — это плагин, обычно лучший способ — сделать для него префикс, в зависимости от того для чего этот плагин. В некоторых проектах есть гайды или соглашения как это делать. Например компоненты AngularJS обычно называются "angular-something", плагины Gulp —"gulp-something", а плагины Karma — "karma-something".
 
-If your module is a plugin, it's usually best to prefix it based on what it's a plugin for.
-Some projects have guidelines or conventions on how to do this.
-For instance, AngularJS components are usually named `angular-something`, Gulp plugins are
-`gulp-something`, and Karma plugins are `karma-something`.
+#### Пишем Readme
 
-### Writing a Readme
+Хороший readme должен состоять из следующих частей:
 
-A good readme should have the following parts.
+- Объяснение, которое умещается в одно предложение.
+- Установка (Install)
+- Смотрите так же (See Also)
 
-#### One Sentence Explanation
+Это правда *важно*. Если существуют другие модули с аналогичной функциональностью, ваш модуль должен объяснять, чем он отличается от других. Эта секция должна быть связана с другими модулями. Это поможет другим решить когда использовать ваш.
 
-#### "Install"
+#### Пишем тесты
 
-#### "See Also"
+Есть много способов писать тесты. Их важность в том, что если они провалятся, процесс будет существовать с кодом ошибки. Вы можете использовать для этого `assert` или `if (condition) { process.exit(1) }` .
 
-This is really important.
-If there are other modules with similar functionality, your module should explain how it differs
-from each one.
-This section should link to the other modules.
-This will help someone decide when to use your module.
+Бонус: вы используете инструмент CI вроде [TravisCI](https://travis-ci.org/).
 
-### Writing tests
+#### Публикация в npm
 
-There are many ways to write tests.
-The important thing is that if the tests fail, the process should exist with an error code.
-You can use `assert` or `if (condition) { process.exit(1) }` to achieve this.
+Перед публикацией:
 
-I like to use `jasmine-node`.
+1. Вы написали `README.md`, который объясняет что делает модуль. Он должен включать секцию `See Also`, которая ведёт на другие подобные пакеты. 
+2. Вы написали тесты. Тесты должны запускаться с помощью `npm test`, и они должны проходить.
 
-Bonus points if you have a CI tool like [TravisCI][]
+Бонус: Найдите кого-нибудь, кто будет содействовать в поддержке проекта. Отлично, если кто-то может помочь делать ревью issues и мёрджить PR. Невозможно угадать, как много свободного времени у вас будет в будущем. Обидно иметь непочиненные баги или несмёрженные PR в полезном проекте.
 
-### Publishing to npm
+### Этикет
 
-Before you publish:
+Обычно люди покидают сообщества, которые кажутся им недоброжелательными. Чтобы быть уверенным, что все ощущают гостеприимство, важно относиться ко всем мягко и с уважением.
 
-1. You have a `README.md` that explains what the module does.
-   It should incude a `See Also` section that links to other similar packages.
-   See TODO for an example.
-2. You should have [tests](#writing-tests).
-   The tests should run with `npm test`, and they should pass.
+Чаще всего — это не проблема. Но иногда у разработчиков случаются срывы, эмоции зашкаливают, они оскорбляются.
 
-<aside>
-**Bonus:** Find someone else who will help you maintain the project.
-It's great to have help reviewing issues and merging PRs.
-You never know how much free time you'll have in the future.
-It would be unfortunate if bugs unfixed or PRs unmerged on an otherwise useful project.
-</aside>
+Дальше я выделил несколько тенденций, которые наблюдал сам и способы смягчить подобные ситуации.
 
+#### Предполагать, что все делают всё возможное
 
+> эта задача должна быть очевидной для решения! почему её никто не решил?
 
-## Etiquette
+Возможно у владельца проекта есть другие важные дела в жизни, которыми ему нужно заниматься. Ставить в приоритет жизненные задачи — не значит быть лентяем. Здоровье, счастье и благополучие реального человека на другом конце интернета намного более важны, чем любой баг.
 
-People usually leave communities that seem disrespectful.
-In order to make sure everyone feels welcome, it's important to treat everyone with kindness and respect.
+Одна из мощных сторон open source как раз в том, что вы всегда можете сделать копию и отладить ошибки сами.
 
-Most of the time, this isn't a problem.
-Occasionally, developers become frustrated, emotions run high, and feelings get hurt.
+> вы очевидно не понимаете, о чём я говорю!
 
-Below I've outlined a few common patterns I've seen, as well as steps to mitigate them.
+Такой тип комментария особенно отталкивает новичков. Совершать ошибки должно быть абсолютно приемлемым.
 
-### Assume Everyone is Doing Their Best
+Это проблематично ещё и потому, что на окружающих участников тоже распространяется чувство вины. Возможно, вы могли бы объяснить недочёт понятнее.
 
-> "this problem should be obvious to solve! why hasn't it been fixed?"
+Абсолютно нормально злиться из-за бессилия. Программирование — это одна из самых сложных деятельностей человека. Но, несмотря на это, нужно не упускать точки зрения других людей. Сообщество намного более ценный компонент, чем код, а быть уважительным важнее, чем быть правым.
 
-Maybe the maintainer has other important things in their life that they need to address.
-Prioritizing those things over something on GitHub doesn't make someone lazy.
-The health, happiness, and wellbeing of the real person on the other end of the internet is much more important than any bug.
+#### Заключение
 
-One of the strengths of open source is that you can always fork and fix problems yourself.
-
-
-> "you obviously don't understand what I'm talking about!"
-
-This type of comment especially drives away beginners.
-It should be okay for people to make mistakes.
-
-This is also problematic because it puts the blame on others.
-Maybe you could explain the issue better.
-
-
-
-It's perfectly normal to get frustrated.
-Programming is one of the hardest things people do!
-Regardless, it's important to consider the perspectives of others.
-Community is more valuable than code, and being nice is more important than being right.
-
-
-## Conclusion
-
-Thanks for taking the time to read this.
-I hope this guide will help you get what you want out of open source.
-If you have any suggestions, please create a [pull request](https://github.com/btford/participating-in-open-source/pulls) or [issue](https://github.com/btford/participating-in-open-source/issues).
+Спасибо за то, что прочитали. Надеюсь этот гайд поможет вам получить то, чего вы хотели от open source.
 
 
 ## License
 MIT
 
-![Analytics](https://ga-beacon.appspot.com/UA-48392963-1/btford/participating-in-open-source?pixel)
-
-[TravisCI]: TODO
